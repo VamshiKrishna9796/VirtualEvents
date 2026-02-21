@@ -1,0 +1,30 @@
+{
+    "name": "event-management-api",
+    "version": "1.0.0",
+    "description": "Virtual event management backend with MongoDB",
+    "main": "index.js",
+    "scripts": {
+        "pretest": "node -e \"if (process.version.slice(1).split('.')[0] < 18) { console.error('Unsupported Node.js version, please use version 18'); process.exit(1); }\"",
+        "test": "node --test test/server.test.js",
+        "start": "nodemon src/server.js"
+    },
+    "author": "Airtribe",
+    "license": "ISC",
+    "devDependencies": {
+        "mongodb-memory-server": "^10.3.0"
+    },
+    "dependencies": {
+        "bcryptjs": "^3.0.3",
+        "dotenv": "^17.2.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.3",
+        "mongoose": "^8.21.0",
+        "nodemon": "^3.1.11"
+    },
+    "engines": {
+        "node": ">= 18.0.0"
+    },
+    "directories": {
+        "test": "test"
+    }
+}
